@@ -1,0 +1,605 @@
+/* ==========================================================================
+   ShopSmart E-Commerce Design System
+   Dual-Theme (Light & Dark) CSS Variables, Gradients & Component Styling
+   ========================================================================== */
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  /* LIGHT THEME (Soft Lavender, Pastel Blue, Muted Pink, Soft Mint, Warm White) */
+  --bg-primary: #fcfbfe;
+  --bg-secondary: #f5f3fa;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-card: linear-gradient(145deg, #ffffff 0%, #f8f6fc 100%);
+  --bg-card-subtle: #fbf9fd;
+  
+  --text-primary: #1e1e2d;
+  --text-secondary: #575c74;
+  --text-muted: #8b90a6;
+  
+  --border-color: rgba(138, 134, 164, 0.16);
+  --border-focus: rgba(124, 113, 186, 0.45);
+  --border-subtle: rgba(138, 134, 164, 0.08);
+  
+  --shadow-sm: 0 2px 8px rgba(100, 90, 130, 0.05);
+  --shadow-md: 0 8px 24px rgba(100, 90, 130, 0.08);
+  --shadow-lg: 0 16px 40px rgba(100, 90, 130, 0.12);
+  --shadow-hover: 0 12px 32px rgba(108, 92, 231, 0.14);
+  
+  --grad-hero: linear-gradient(135deg, #ece7f8 0%, #dfebfb 50%, #e2f2ec 100%);
+  --grad-primary: linear-gradient(135deg, #7c71ba 0%, #638ecb 100%);
+  --grad-primary-hover: linear-gradient(135deg, #6c60ac 0%, #547ebc 100%);
+  --grad-accent: linear-gradient(135deg, #e49aa6 0%, #e8b093 100%);
+  --grad-card: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 245, 253, 0.88) 100%);
+  --grad-banner: linear-gradient(120deg, #f4edf7 0%, #e6effa 55%, #eef6f2 100%);
+  --grad-badge: linear-gradient(135deg, rgba(124, 113, 186, 0.12) 0%, rgba(99, 142, 203, 0.12) 100%);
+  
+  --color-primary: #7367c8;
+  --color-primary-hover: #5f52b8;
+  --color-secondary: #65758e;
+  --color-accent: #df7a87;
+  --color-success: #3bb273;
+  --color-warning: #e09f3e;
+  --color-danger: #e05d6f;
+  
+  --badge-bg: rgba(115, 103, 200, 0.10);
+  --badge-color: #6355bc;
+  --badge-apriori-bg: rgba(99, 142, 203, 0.14);
+  --badge-apriori-color: #3b6aa8;
+  
+  --card-hover-border: rgba(124, 113, 186, 0.35);
+  --nav-bg: rgba(252, 251, 254, 0.88);
+  --input-bg: #ffffff;
+  --input-border: rgba(138, 134, 164, 0.24);
+  
+  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='dark'] {
+  /* DARK THEME (Deep Charcoal, Dark Navy, Muted Purple, Dusty Blue, Soft Lavender, Muted Pink Accents) */
+  --bg-primary: #0f1118;
+  --bg-secondary: #161824;
+  --bg-surface: #1d2030;
+  --bg-surface-elevated: #24283b;
+  --bg-card: linear-gradient(145deg, #1e2133 0%, #171927 100%);
+  --bg-card-subtle: #1a1d2c;
+  
+  --text-primary: #edf0f8;
+  --text-secondary: #a4abc2;
+  --text-muted: #717792;
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(155, 141, 247, 0.45);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.60);
+  --shadow-hover: 0 12px 32px rgba(155, 141, 247, 0.18);
+  
+  --grad-hero: linear-gradient(135deg, #1f1a30 0%, #162235 50%, #142624 100%);
+  --grad-primary: linear-gradient(135deg, #8f84d6 0%, #6f9bd8 100%);
+  --grad-primary-hover: linear-gradient(135deg, #a197e4 0%, #82aae4 100%);
+  --grad-accent: linear-gradient(135deg, #d68390 0%, #caa085 100%);
+  --grad-card: linear-gradient(180deg, rgba(32, 35, 51, 0.95) 0%, rgba(22, 24, 37, 0.92) 100%);
+  --grad-banner: linear-gradient(120deg, #242038 0%, #1b283f 55%, #182c2a 100%);
+  --grad-badge: linear-gradient(135deg, rgba(143, 132, 214, 0.18) 0%, rgba(111, 155, 216, 0.18) 100%);
+  
+  --color-primary: #9b8df7;
+  --color-primary-hover: #b0a4ff;
+  --color-secondary: #8c9cb8;
+  --color-accent: #e58d99;
+  --color-success: #4ecdc4;
+  --color-warning: #e9c46a;
+  --color-danger: #f28482;
+  
+  --badge-bg: rgba(155, 141, 247, 0.16);
+  --badge-color: #c4bbfd;
+  --badge-apriori-bg: rgba(111, 155, 216, 0.20);
+  --badge-apriori-color: #9ac2f8;
+  
+  --card-hover-border: rgba(155, 141, 247, 0.35);
+  --nav-bg: rgba(15, 17, 24, 0.88);
+  --input-bg: #1a1d2c;
+  --input-border: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   Base Elements
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: var(--theme-transition);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Modern App Layout & Navigation
+   ========================================================================== */
+
+.navbar-custom {
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: var(--theme-transition);
+}
+
+.brand-logo {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Theme Toggle Button
+   ========================================================================== */
+
+.theme-toggle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Product Cards & Hover Effects
+   ========================================================================== */
+
+.smart-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.smart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--card-hover-border);
+}
+
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio */
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.card-img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.smart-card:hover .card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.card-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.wishlist-btn-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme='dark'] .wishlist-btn-overlay {
+  background: rgba(28, 30, 44, 0.85);
+  color: #94a3b8;
+}
+
+.wishlist-btn-overlay:hover,
+.wishlist-btn-overlay.active {
+  color: #e05d6f !important;
+  transform: scale(1.1);
+}
+
+.smart-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 4px 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.smart-badge-apriori {
+  background: var(--badge-apriori-bg);
+  color: var(--badge-apriori-color);
+  font-weight: 600;
+  font-size: 0.72rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   Buttons & Form Controls
+   ========================================================================== */
+
+.btn-primary-gradient {
+  background: var(--grad-primary);
+  color: #ffffff !important;
+  border: none;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px 22px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(115, 103, 200, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary-gradient:hover {
+  background: var(--grad-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(115, 103, 200, 0.35);
+  color: #ffffff !important;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 9px 20px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-custom:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--badge-bg);
+}
+
+.form-control-custom {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-primary);
+  border-radius: 12px;
+  padding: 11px 16px;
+  transition: var(--theme-transition);
+}
+
+.form-control-custom:focus {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(115, 103, 200, 0.18);
+  outline: none;
+}
+
+.form-control-custom::placeholder {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Sections & Containers
+   ========================================================================== */
+
+.hero-section {
+  background: var(--grad-hero);
+  border-bottom: 1px solid var(--border-color);
+  padding: 70px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  margin-bottom: 1.8rem;
+}
+
+/* Category Pills */
+.category-pill {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+.category-pill:hover,
+.category-pill.active {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-primary);
+  background: var(--badge-bg);
+}
+
+/* Apriori Explanatory Pill */
+.apriori-pill {
+  font-size: 0.76rem;
+  background: var(--grad-badge);
+  border: 1px solid var(--border-color);
+  color: var(--badge-apriori-color);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   Autocomplete Dropdown
+   ========================================================================== */
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: var(--shadow-lg);
+  margin-top: 6px;
+  z-index: 1050;
+  overflow: hidden;
+}
+
+.search-suggestion-item {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.search-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.search-suggestion-item:hover {
+  background: var(--badge-bg);
+}
+
+/* ==========================================================================
+   Toast / Notification Banner
+   ========================================================================== */
+
+.toast-container-custom {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-toast {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 14px 20px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 300px;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Admin & User Dashboard Elements
+   ========================================================================== */
+
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--card-hover-border);
+}
+
+.metric-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--badge-bg);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-custom {
+  color: var(--text-primary);
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table-custom th {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-custom td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.table-custom tr:hover td {
+  background: var(--badge-bg);
+}
+
+/* Modals */
+.modal-content-custom {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  color: var(--text-primary);
+}
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 18, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
