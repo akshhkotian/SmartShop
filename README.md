@@ -1,6 +1,8 @@
 # ShopSmart – Personalized E-Commerce with Apriori Recommendation System
 
-**ShopSmart** is a production-grade, modern, personalized online shopping platform built with **React.js**, **Bootstrap 5**, **Python Flask**, **MySQL**, and **MLxtend Apriori Machine Learning**.
+[![GitHub Repository](https://img.shields.io/badge/GitHub-akshhkotian%2FSmartShop-blue?logo=github)](https://github.com/akshhkotian/SmartShop.git)
+
+**ShopSmart** is a production-grade, modern, personalized online shopping platform built with **React.js**, **Bootstrap 5**, **Python Flask**, **MySQL / SQLite**, and **MLxtend Apriori Machine Learning**, tailored for the **Indian market** with full Indian Rupee (`₹` / INR) currency formatting, Indian personas, and localized payment options (UPI, Net Banking, COD).
 
 The application delivers individualized product suggestions generated dynamically using the **Apriori Association Rule Mining Algorithm**, weighting user searches, browsing history, cart additions, wishlist saves, and purchases.
 
@@ -33,10 +35,10 @@ The application delivers individualized product suggestions generated dynamicall
 - **CSS Variable Architecture**: Strict adherence to CSS custom properties with zero Tailwind dependencies.
 
 ### 3. Shopping Experience
-- **Catalog Filtering**: Multi-faceted filter by category, price slider ($20 - $2,000), minimum rating (3.5★, 4.0★, 4.5★), and sorting (Popularity, Rating, Price Low-High, Price High-Low, Newest).
-- **Live Search Autocomplete**: Debounced search dropdown displaying matched products with thumbnails, prices, and matching category links.
-- **Persistent Cart & Wishlist**: Stored in the database with real-time quantity adjustments, price calculations, and promo code discounts (`SMART20`, `WELCOME10`).
-- **Complete Checkout Flow**: Address confirmation, payment method selection, and order tracking with immediate post-purchase recommendations.
+- **Catalog Filtering**: Multi-faceted filter by category, price slider (₹100 - ₹2,50,000), minimum rating (3.5★, 4.0★, 4.5★), and sorting (Popularity, Rating, Price Low-High, Price High-Low, Newest).
+- **Live Search Autocomplete**: Debounced search dropdown displaying matched products with thumbnails, prices in Indian Rupees (₹), and matching category links.
+- **Persistent Cart & Wishlist**: Stored in the database with real-time quantity adjustments, INR price calculations, and promo code discounts (`SMART20`, `WELCOME10`).
+- **Complete Checkout Flow**: Indian address delivery information, Indian payment options (UPI, RuPay/Cards, Net Banking, COD), and order tracking with immediate post-purchase recommendations.
 
 ### 4. Admin Management & Recommendation Analytics
 - **Executive KPI Dashboard**: Total revenue, orders, active products, and active Apriori rules count.
@@ -187,16 +189,16 @@ Open your browser to: **[http://localhost:5173](http://localhost:5173)**
 
 ---
 
-## 🔐 Default Demo Accounts (1-Click Login Available)
+## 🔐 Seeded Accounts (For Testing & Evaluation)
 
-For quick evaluation, click the demo login buttons on the **Sign In** page:
+Use the following credentials to test personalized recommendations, cart, and checkout:
 
-| Role | Username / Email | Password | Interests / Profile |
+| Role | Username / Email | Password | Location / Profile |
 | :--- | :--- | :--- | :--- |
-| **Customer 1** | `alex@example.com` | `Password123!` | Tech & Workstations (MacBook, MX Master, Keyboards) |
-| **Customer 2** | `sophia@example.com` | `Password123!` | Skincare & Fashion (Serums, Vitamin C, Sneakers) |
-| **Customer 3** | `david@example.com` | `Password123!` | Sports & Fitness (Yoga Mat, Resistance Bands, Towel) |
-| **Admin** | `admin@shopsmart.com` | `AdminPassword123!` | Superadmin (Full Analytics, CRUD, Apriori Rules) |
+| **Customer 1** | `aarav@example.com` (`aarav_tech`) | `Password123!` | Indiranagar, Bengaluru (Tech & Workstations: MacBook, Logitech, Wireless Stand) |
+| **Customer 2** | `ananya@example.com` (`ananya_style`) | `Password123!` | Bandra West, Mumbai (Skincare & Fashion: Serums, Kurta, Denim Jacket) |
+| **Customer 3** | `rohan@example.com` (`rohan_fitness`) | `Password123!` | Sector 62, Noida (Sports & Fitness: Yoga Mat, Dumbbells, Protein) |
+| **Administrator** | `admin@shopsmart.com` | `AdminPassword123!` | ShopSmart India Administrator (Full Analytics, CRUD, Mined Apriori Rules) |
 
 ---
 
