@@ -106,13 +106,13 @@ export default function AuthLandingPage({ initialTab = 'login' }) {
                   <span>ShopSmart</span>
                   <span className="brand-dot"></span>
                 </Link>
-                <h3 className="fw-bolder mb-1" style={{ letterSpacing: '-0.02em' }}>
+                <h3 className="fw-bold mb-1" style={{ letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>
                   {activeTab === 'login' ? 'Welcome Back' : 'Create an Account'}
                 </h3>
                 <p className="text-muted small mb-0">
                   {activeTab === 'login'
-                    ? 'Sign in to access your personalized shopping experience'
-                    : 'Join ShopSmart to discover products tailored to your taste'}
+                    ? 'Sign in to access your orders and saved items'
+                    : 'Join to explore our curated collection'}
                 </p>
               </div>
 

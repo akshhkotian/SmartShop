@@ -66,13 +66,7 @@ export default function OrderSuccessPage() {
         {/* Post-Purchase Recommendations */}
         {postPurchaseRecs.length > 0 && (
           <div className="text-start mt-5">
-            <div className="d-flex align-items-center gap-2 mb-3">
-              <span className="smart-badge-apriori smart-badge">
-                <Sparkles size={12} />
-                Recommended Additions
-              </span>
-              <h4 className="fw-bold mb-0">Recommended Based on Your Purchase</h4>
-            </div>
+            <h4 className="fw-bold mb-3">You might also enjoy</h4>
             <div className="row g-4">
               {postPurchaseRecs.map((prod) => (
                 <div key={prod.id} className="col-12 col-sm-6 col-md-3">

@@ -178,7 +178,7 @@ export default function Navbar() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => searchQuery.trim().length >= 2 && setShowSuggestions(true)}
-              placeholder="Search laptops, skincare, shoes, books..."
+              placeholder="Search collection..."
               className="form-control-custom w-100 ps-5 pe-5"
               style={{ height: '44px', fontSize: '0.92rem' }}
             />

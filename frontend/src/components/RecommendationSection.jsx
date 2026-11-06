@@ -1,30 +1,21 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function RecommendationSection({
   title,
   subtitle,
-  badgeText = 'Recommended For You',
   products = [],
   viewAllLink = null,
-  loading = false,
-  emptyMessage = 'No recommendations yet. Start browsing to discover personalized picks!'
+  loading = false
 }) {
   if (loading) {
     return (
       <section className="my-5">
         <div className="container">
-          <div className="d-flex justify-content-between align-items-end mb-4">
-            <div>
-              <div className="placeholder-glow mb-2">
-                <span className="placeholder col-4 rounded-pill"></span>
-              </div>
-              <div className="placeholder-glow">
-                <span className="placeholder col-6" style={{ height: '28px' }}></span>
-              </div>
-            </div>
+          <div className="placeholder-glow mb-4">
+            <span className="placeholder col-3" style={{ height: '24px' }}></span>
           </div>
           <div className="row g-4">
             {[1, 2, 3, 4].map(i => (
@@ -52,24 +43,18 @@ export default function RecommendationSection({
     <section className="my-5">
       <div className="container">
         {/* Section Header */}
-        <div className="d-flex flex-wrap justify-content-between align-items-end mb-4 gap-2">
+        <div className="d-flex justify-content-between align-items-end mb-4">
           <div>
-            {badgeText && (
-              <span className="smart-badge-apriori smart-badge mb-2 d-inline-flex">
-                <Sparkles size={12} />
-                {badgeText}
-              </span>
-            )}
-            <h2 className="section-title">
+            <h2 className="section-title mb-1">
               {title}
             </h2>
             {subtitle && <p className="section-subtitle mb-0">{subtitle}</p>}
           </div>
 
           {viewAllLink && (
-            <Link to={viewAllLink} className="btn-outline-custom text-decoration-none d-inline-flex align-items-center gap-2">
-              <span>View All</span>
-              <ArrowRight size={15} />
+            <Link to={viewAllLink} className="small text-decoration-none d-inline-flex align-items-center gap-1" style={{ color: 'var(--color-secondary)', fontWeight: 600 }}>
+              <span>View Collection</span>
+              <ArrowRight size={14} />
             </Link>
           )}
         </div>

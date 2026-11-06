@@ -16,8 +16,8 @@ export default function StarRating({ rating = 4.5, count = null, size = 15 }) {
               key={star}
               size={size}
               style={{
-                fill: filled ? '#f59e0b' : half ? '#fcd34d' : 'transparent',
-                stroke: filled || half ? '#f59e0b' : '#cbd5e1',
+                fill: filled ? '#c69c6d' : half ? '#dfb987' : 'transparent',
+                stroke: filled || half ? '#c69c6d' : 'var(--border-color)',
                 marginRight: '1px'
               }}
             />

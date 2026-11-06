@@ -162,16 +162,7 @@ export default function CartPage() {
             {/* Cart-Based Recommendations */}
             {cartRecommendations.length > 0 && (
               <div className="mt-5 p-4 rounded-4" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-color)' }}>
-                <div className="d-flex align-items-center gap-2 mb-3">
-                  <span className="smart-badge-apriori smart-badge">
-                    <Sparkles size={12} />
-                    Pairs Great With Your Cart
-                  </span>
-                  <h5 className="fw-bold mb-0">Complete Your Setup</h5>
-                </div>
-                <p className="small text-muted mb-4">
-                  Customers with similar carts frequently added these products before checkout.
-                </p>
+                <h5 className="fw-bold mb-3">You might also like</h5>
                 <div className="row g-3">
                   {cartRecommendations.slice(0, 3).map((rec) => (
                     <div key={rec.id} className="col-12 col-md-4">

@@ -261,16 +261,7 @@ export default function ProductDetailPage() {
         {/* 2. Frequently Bought Together */}
         {fbtProducts.length > 0 && (
           <section className="p-4 rounded-4 my-5" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', boxShadow: 'var(--shadow-sm)' }}>
-            <div className="d-flex align-items-center gap-2 mb-3">
-              <span className="smart-badge-apriori smart-badge">
-                <Sparkles size={13} />
-                Bundle & Save
-              </span>
-              <h4 className="fw-bold mb-0">Frequently Bought Together</h4>
-            </div>
-            <p className="small text-muted mb-4">
-              Shoppers who purchased this item frequently paired it with these complementary products.
-            </p>
+            <h4 className="fw-bold mb-3">Frequently Paired Together</h4>
 
             <div className="row align-items-center g-4">
               {/* Product thumbnails with plus signs */}
@@ -332,7 +323,7 @@ export default function ProductDetailPage() {
                         id={`fbt-${fbt.id}`}
                       />
                       <label className="form-check-label cursor-pointer" htmlFor={`fbt-${fbt.id}`}>
-                        {fbt.name} ({formatINR(fbt.price)}) – <span className="text-muted">{fbt.rec_reason}</span>
+                        {fbt.name} ({formatINR(fbt.price)})
                       </label>
                     </div>
                   ))}

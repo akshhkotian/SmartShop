@@ -208,11 +208,7 @@ export default function UserDashboardPage() {
         <section className="mb-5">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div>
-              <span className="smart-badge-apriori smart-badge mb-1 d-inline-flex">
-                <Sparkles size={12} />
-                Curated Picks
-              </span>
-              <h3 className="fw-bold mb-0">Recommended Specifically For You</h3>
+              <h3 className="fw-bold mb-0">Curated For You</h3>
             </div>
             <Link to="/products" className="btn-outline-custom">
               Browse More
